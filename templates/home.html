@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My title</title>
+    {% if title %}
+        <title>The given title is {{ title }}</title>
+    {% else %}
+        <title>Title does not exists</title>
+    {% endif %}
 </head>
 <body>
     <h1>This is the home page</h1>
     <h2>This is used to check templates</h2>
+    <h2>My name is {{user.username}}</h2>
+    <h3>{{ posts[0].body }}</h3>
 </body>
 </html>
