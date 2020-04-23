@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-app = Flask(__name__)
+from app import app
 @app.route('/home')
 @app.route('/')
 def Home():
@@ -25,5 +25,3 @@ def product():
 @app.route('/about')
 def about():
     return render_template('about.html')
-# app.run(port=5002)
-app.run(port=5000, debug=True)
