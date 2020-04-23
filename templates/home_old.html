@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>The given title is {{ title }}</title>
+    {% else %}
+        <title>Title does not exists</title>
+    {% endif %}
+</head>
+<body>
+    <h3>This is my website</h3>
+
+    <h1>This is the home page</h1>
+    <h2>This is used to check templates</h2>
+    <h2>My name is {{user.username}}</h2>
+    {% for post in posts %}
+    <h4>Author: {{ post.author.username }}</h4>
+    <h3>Post: {{ post.body }}</h3>
+    {% endfor %}
+<!--    <h3>{{ posts[0].body }}</h3>-->
+<!--    <h3>{{ posts[1].body }}</h3>-->
+<!--    <h3>{{ posts[2].body }}</h3>-->
+</body>
+</html>
