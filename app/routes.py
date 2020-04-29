@@ -3,7 +3,7 @@ from app import app
 from app.forms import LoginForm
 @app.route('/home')
 @app.route('/')
-def Home():
+def home():
     user = {'username': 'Syed Zaman Mostafiz'}
     posts = [
         {
@@ -23,7 +23,7 @@ def Home():
 @app.route('/product')
 def product():
     return render_template('product.html')
-@app.route('/about')
+@app.route('/about_us all of us')
 def about():
     return render_template('about.html')
 @app.route('/login')
